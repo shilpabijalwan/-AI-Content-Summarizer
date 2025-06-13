@@ -23,5 +23,6 @@ A simple React-based application that uses  Gemini API to summarize long pieces 
 - React Markdown
 
 ---
+vercel link : https://ai-content-summarizer-three.vercel.app/
 
 
