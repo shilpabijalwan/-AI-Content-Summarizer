@@ -2,7 +2,6 @@ import axios from "axios";
 
 // pages/api/summarize.js
 export default async function handler(text) {
-  console.log(text,"text from api.js");
   if (!text || text.trim() === "") {
     return "Please provide some text to summarize.";
   }
