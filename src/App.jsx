@@ -1,6 +1,7 @@
 import { useState } from "react";
 import handler from "./utils/api";
 import ReactMarkdown from "react-markdown";
+import CopyOnClick from "./components/copyOnClick";
 
 function App() {
   const [text, setText] = useState("");
@@ -55,9 +56,12 @@ function App() {
 
         {summary && (
           <div className="mt-6 text-gray-100">
-            <h2 className="text-xl font-semibold mb-2 text-gray-200">
-              📝 Summary
-            </h2>
+            <div className="flex items-center gap-2">
+              <h2 className="text-xl font-semibold mb-2 text-gray-200">
+                📝 Summary
+              </h2>
+              <CopyOnClick text={summary} id="copy-summary-btn" />
+            </div>
             <div className="prose prose-invert max-w-none">
               <ReactMarkdown
                 components={{
